@@ -3,14 +3,14 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ynov</groupId>
-	<artifactId>YnovJava</artifactId>
+	<artifactId>ynovjava</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>YnovJava</name>
+	<name>ynovjava</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -31,11 +31,18 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.ynov.pipelines.App</mainClass>
+							<mainClass>com.ynov.ynovjava.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/sinaure/ynov-pipelines</url>
+		</repository>
+	</distributionManagement>
 </project>

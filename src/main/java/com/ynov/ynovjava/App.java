@@ -1,4 +1,4 @@
-package com.ynov.pipelines;
+package com.ynov.ynovjava;
 
 public class App   
 {  
