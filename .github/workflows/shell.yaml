@@ -1,0 +1,11 @@
+name: Example Workflow
+on:
+  push:
+    paths:
+    - .github/scripts
+jobs:
+  example-job:
+    steps:
+      - name: Run example script
+        run: ./.github/scripts/example.sh
+        shell: bash
