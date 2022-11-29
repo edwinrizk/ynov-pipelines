@@ -2,10 +2,16 @@ name: Example Workflow
 on:
   push:
     paths:
-    - .github/scripts
+    - 'scripts/*'
+    - '.github/workflows/*.yaml'
 jobs:
   example-job:
+    runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v2
+      - name: List
+        run: ls -a
+      - name: where I am
+        run: pwd
       - name: Run example script
-        run: ./.github/scripts/example.sh
-        shell: bash
+        run: bash ./scripts/example.sh Ynov
